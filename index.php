@@ -43,7 +43,7 @@ function yt_snip( $atts, $content = null ) {
              'end' => '',         
         ), $atts));   
 
-    $video = '<div data-video="' . $id . '" ' ;
+    $video = '<div class="yt-video" data-video="' . $id . '" ' ;
 
     if ($start > 0){
         $vid_start =  ' data-startseconds="' . $start . '" ';
@@ -54,7 +54,7 @@ function yt_snip( $atts, $content = null ) {
         $vid_end = ' data-endseconds="'.$end.'" ';    
     }
     
-    $vid_basics =  'data-height="480" data-width="640" id="youtube-player"></div>' ;
+    $vid_basics =  'data-height="480" data-width="640" id="youtube-player-'.randId().'"></div>' ;
     
     $html = $video . $vid_start . $vid_end . $vid_basics;
 
@@ -62,5 +62,11 @@ function yt_snip( $atts, $content = null ) {
 }
 
 add_shortcode( 'yt_video', 'yt_snip' );
+
+function randId(){
+    $id = substr(md5(microtime()),0,20);
+    return $id;
+}
+
 
 
