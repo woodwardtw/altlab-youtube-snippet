@@ -2,7 +2,8 @@
 /**
  * Plugin Name: ALT LAB - YouTube Video Snippet
  * Plugin URI: https://github.com/woodwardtw/
- * Description: embed start/end time youtube videos via shortcode [ytvideo id='id' start='' end='']
+ * Description: embed start/end time youtube videos via shortcode [ytvideo id='id' start='' end=''] derived from https://www.labnol.org/internet/embed-part-of-youtube-video/27948/
+
  * Version: 1.7
  * Author: Tom Woodward
  * Author URI: http://bionicteaching.com
